@@ -254,13 +254,13 @@ This **Industrial Oriented Mini Project** was developed by students of **ACE Eng
       <a href="https://linkedin.com/in/sandeep">💼 LinkedIn</a>
     </td>
     <td align="center">
-      <img src="https://github.com/rajesh.png" width="100px;" alt="Rajesh"/>
+      <img src="https://github.com/Rajesh-challa.png" width="100px;" alt="Rajesh"/>
       <br />
       <sub><b>Rajesh</b></sub>
       <br />
       <small>Backend Security Engineer</small>
       <br />
-      <a href="https://github.com/rajesh">🐙 GitHub</a> • 
+      <a href="https://github.com/Rajesh-challa">🐙 GitHub</a> • 
       <a href="https://www.linkedin.com/in/challa-rajesh-695962256">💼 LinkedIn</a>
     </td>
   </tr>
