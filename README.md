@@ -248,19 +248,7 @@ We welcome contributions! Here's how you can help:
 - Add comments for complex logic
 - Ensure responsive design for frontend
 
-## 🎯 Roadmap
 
-### 🚀 Version 2.0 (Q2 2024)
-- [ ] Enhanced vulnerability database
-- [ ] Custom security rule engine
-- [ ] Automated report generation
-- [ ] Email notification system
-
-### 🔮 Version 3.0 (Q4 2024)
-- [ ] AI-powered threat detection
-- [ ] Integration with CI/CD pipelines
-- [ ] Mobile-responsive dashboard
-- [ ] Advanced analytics and trends
 
 ## 👥 Team
 
@@ -310,11 +298,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Certificate Transparency](https://certificate.transparency.dev/) for SSL monitoring
 - [Mozilla Observatory](https://observatory.mozilla.org/) for security insights
 
-## 📞 Support
 
-- 📧 Email: support@security-analyzer.com
-- 📖 Documentation: [docs.security-analyzer.com](https://docs.security-analyzer.com)
-- 🐛 Issues: [GitHub Issues](https://github.com/your-repo/issues)
 
 ---
 
@@ -323,9 +307,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **⭐ Star this repository if you find it helpful!**
 
 Made with ❤️ by the Security Analyzer Team
-
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=your-repo.network-security-analyzer)
-![GitHub stars](https://img.shields.io/github/stars/your-repo/network-security-analyzer?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-repo/network-security-analyzer?style=social)
 
 </div>
