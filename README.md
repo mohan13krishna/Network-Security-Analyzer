@@ -9,8 +9,6 @@
 
 **A comprehensive web security analysis platform that identifies vulnerabilities and strengthens digital defenses**
 
-[🚀 Live Demo](https://your-demo-link.com) • [📖 Documentation](https://docs.your-project.com) • [🐛 Report Bug](https://github.com/your-repo/issues) • [💡 Request Feature](https://github.com/your-repo/issues)
-
 </div>
 
 ---
