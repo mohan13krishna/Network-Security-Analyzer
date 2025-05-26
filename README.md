@@ -15,8 +15,6 @@
 
 ---
 
-## 🔗 Live Demo
-**[Try Network Security Analyzer Now](https://your-demo-link.com)**
 
 ## 🤖 Overview
 
