@@ -290,7 +290,7 @@ Their expertise, mentorship, and continuous encouragement were instrumental in t
 
 ## 📞 Contact
 
-Project Link: [https://github.com/mohan13krishna/Network-Security-Analyzer.git](https://github.com/mohan13krishna/Network-Security-Analyzer)
+Project Link: [https://github.com/mohan13krishna/Network-Security-Analyzer](https://github.com/mohan13krishna/Network-Security-Analyzer)
 
 ---
 
