@@ -1,0 +1,132 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #2c3e50;
+  padding: 40px 20px;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  background: linear-gradient(45deg, #007BFF, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Input and Button */
+input[type="text"] {
+  width: 70%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF;
+}
+
+button {
+  padding: 14px 22px;
+  font-size: 16px;
+  margin-left: 10px;
+  background: linear-gradient(to right, #007BFF, #00c6ff);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #0056b3, #0099cc);
+}
+
+/* Results Section */
+#results {
+  margin-top: 40px;
+}
+
+/* Card Styling */
+.card {
+  background: #f9fafb;
+  border-left: 6px solid #007BFF;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #007BFF;
+  font-size: 1.4rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Safe or Alert Card */
+.card.safe {
+  border-left-color: #28a745;
+}
+
+.card.alert {
+  border-left-color: #dc3545;
+  background: #fdecea;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
