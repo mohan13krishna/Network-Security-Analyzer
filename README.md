@@ -276,8 +276,8 @@ We extend our heartfelt gratitude to the distinguished faculty members of **ACE 
 |----------|-------------------|-----------------|
 | 🎯 **Project Guide** | **Mrs. K. Swathi** | Assistant Professor |
 | 📋 **Project Coordinator** | **Mr. B. Narasimhulu** | Associate Professor |
-| 👥 **Head of Section** | **Mr. V. Chandra Shekar Reddy** | Associate Professor |
 | 📚 **Class Incharge** | **Mrs. P. Swaroopa** | Assistant Professor |
+| 👥 **Head of Section** | **Mr. V. Chandra Shekar Reddy** | Associate Professor |
 | 🎓 **Professor & Dean CSE** | **Dr. M. V. Vijaya Saradhi** | Professor & Dean |
 
 </div>
