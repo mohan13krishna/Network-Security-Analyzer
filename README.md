@@ -5,7 +5,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=E53E3E&center=true&vCenter=true&random=false&width=600&lines=Network+Security+Analyzer;Real-time+Vulnerability+Scanner;SSL%2FTLS+%26+Port+Analysis;Built+by+Security+Enthusiasts)](https://git.io/typing-svg)
 
 ![Network Security](https://img.shields.io/badge/Security-Network%20Scanner-red?style=for-the-badge&logo=security&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=black) 
 ![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
