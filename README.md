@@ -261,7 +261,7 @@ This **Industrial Oriented Mini Project** was developed by students of **ACE Eng
       <small>Backend Security Engineer</small>
       <br />
       <a href="https://github.com/rajesh">🐙 GitHub</a> • 
-      <a href="https://linkedin.com/in/rajesh">💼 LinkedIn</a>
+      <a href="https://www.linkedin.com/in/challa-rajesh-695962256">💼 LinkedIn</a>
     </td>
   </tr>
 </table>
