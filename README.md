@@ -267,14 +267,14 @@ We welcome contributions! Here's how you can help:
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/mohan-krishna.png" width="100px;" alt="Mohan Krishna"/>
+      <img src="https://github.com/mohan13krishna.png" width="100px;" alt="Mohan Krishna"/>
       <br />
       <sub><b>Mohan Krishna</b></sub>
       <br />
       <small>Full Stack Developer</small>
       <br />
-      <a href="https://github.com/mohan-krishna">🐙</a>
-      <a href="https://linkedin.com/in/mohan-krishna">💼</a>
+      <a href="https://github.com/mohan13krishna">🐙</a>
+      <a href="https://www.linkedin.com/in/mohan-krishna-thalla-a423a3301/">💼</a>
     </td>
     <td align="center">
       <img src="https://github.com/sandeep.png" width="100px;" alt="Sandeep"/>
