@@ -244,14 +244,14 @@ This **Industrial Oriented Mini Project** was developed by students of **ACE Eng
       <a href="https://www.linkedin.com/in/mohan-krishna-thalla-a423a3301/">💼 LinkedIn</a>
     </td>
     <td align="center">
-      <img src="https://github.com/sandeep.png" width="100px;" alt="Sandeep"/>
+      <img src="https://github.com/sandeepraju6581.png" width="100px;" alt="Sandeep"/>
       <br />
-      <sub><b>Sandeep</b></sub>
+      <sub><b>Sandeep Raju</b></sub>
       <br />
       <small>Frontend Specialist</small>
       <br />
-      <a href="https://github.com/sandeep">🐙 GitHub</a> • 
-      <a href="https://linkedin.com/in/sandeep">💼 LinkedIn</a>
+      <a href="https://github.com/sandeepraju6581">🐙 GitHub</a> • 
+      <a href="https://www.linkedin.com/in/sandeep-raju-937801183/">💼 LinkedIn</a>
     </td>
     <td align="center">
       <img src="https://github.com/Rajesh-challa.png" width="100px;" alt="Rajesh"/>
