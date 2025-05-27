@@ -1,5 +1,5 @@
 # 🛡️ Network Security Analyzer
-
+ 
 <div align="center">
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=E53E3E&center=true&vCenter=true&random=false&width=600&lines=Network+Security+Analyzer;Real-time+Vulnerability+Scanner;SSL%2FTLS+%26+Port+Analysis;Built+by+Security+Enthusiasts)](https://git.io/typing-svg)
