@@ -8,7 +8,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=black) 
 ![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
-
+ 
 **A comprehensive web security analysis platform that identifies vulnerabilities and strengthens digital defenses**
 
 </div>
