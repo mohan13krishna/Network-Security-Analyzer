@@ -241,7 +241,7 @@ This **Industrial Oriented Mini Project** was developed by students of **ACE Eng
       <small>Full Stack Developer</small>
       <br />
       <a href="https://github.com/mohan13krishna">🐙 GitHub</a> • 
-      <a href="https://www.linkedin.com/in/mohan-krishna-thalla-a423a3301/">💼 LinkedIn</a>
+      <a href="https://www.linkedin.com/in/mohan-krishna-thalla">💼 LinkedIn</a>
     </td>
     <td align="center">
       <img src="https://github.com/sandeepraju6581.png" width="100px;" alt="Sandeep"/>
