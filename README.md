@@ -24,7 +24,7 @@ Network Security Analyzer is an innovative security assessment platform designed
 
 This project represents our commitment to bridging the gap between academic learning and industry requirements. Developed under the guidance of distinguished faculty members, this mini project showcases practical implementation of network security concepts in a real-world application.
 
-## ✨ Features
+## ✨ Features 
 
 - **🔐 SSL/TLS Analysis:** Complete certificate validation, cipher suite analysis, and HSTS compliance checking
 - **🛡️ Security Headers Detection:** Comprehensive analysis of CSP, X-Frame-Options, and other protective headers
