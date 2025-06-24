@@ -3,18 +3,394 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Network Security Scanner</title>
+  <title>Network Security Analyzer</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Slab&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Professional network security analyzer with real-time vulnerability scanning">
+  <meta name="theme-color" content="#007BFF">
 </head>
 <body>
-  <div class="container">
-    <h1>🌐 Network Security Analyzer</h1>
-    <input type="text" id="urlInput" placeholder="Enter domain (e.g., www.example.com)" />
-    <button onclick="startScan()">Scan Website</button>
-    <div id="results"></div>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <i class="fas fa-shield-alt"></i>
+        <span>SecureAnalyzer</span>
+      </div>
+      
+      <div class="nav-menu" id="navMenu">
+        <div class="nav-auth" id="navAuth">
+          <button class="btn btn-outline" onclick="showAuthModal('login')">Login</button>
+          <button class="btn btn-primary" onclick="showAuthModal('register')">Sign Up</button>
+        </div>
+        
+        <div class="nav-user hidden" id="navUser">
+          <div class="user-dropdown">
+            <button class="user-btn" onclick="toggleUserMenu()">
+              <img src="" alt="Avatar" class="user-avatar" id="userAvatar">
+              <span class="user-name" id="userName"></span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-menu" id="userDropdown">
+              <a href="#" onclick="showProfile()"><i class="fas fa-user"></i> Profile</a>
+              <a href="#" onclick="showHistory()"><i class="fas fa-history"></i> Scan History</a>
+              <div class="developer-only hidden" id="developerMenu">
+                <a href="#" onclick="showAnalytics()"><i class="fas fa-chart-bar"></i> Analytics</a>
+              </div>
+              <hr>
+              <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Landing Section -->
+    <section class="hero-section" id="heroSection">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="gradient-text">Network Security</span>
+            <br>Analyzer
+          </h1>
+          <p class="hero-subtitle">
+            Professional-grade security scanning platform for comprehensive vulnerability assessment and real-time threat detection.
+          </p>
+          <div class="hero-features">
+            <div class="feature-item">
+              <i class="fas fa-lock"></i>
+              <span>SSL/TLS Analysis</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Security Headers</span>
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-network-wired"></i>
+              <span>Port Scanning</span>
+            </div>
+          </div>
+          <button class="btn btn-hero" onclick="showAuthModal('register')">
+            Get Started Free
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="hero-visual">
+          <div class="security-dashboard">
+            <div class="dashboard-header">
+              <div class="status-indicator active"></div>
+              <span>Live Security Monitor</span>
+            </div>
+            <div class="dashboard-content">
+              <div class="metric">
+                <span class="metric-value">98%</span>
+                <span class="metric-label">Security Score</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">0</span>
+                <span class="metric-label">Critical Issues</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">5</span>
+                <span class="metric-label">Scans Today</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scanner Section -->
+    <section class="scanner-section hidden" id="scannerSection">
+      <div class="container">
+        <div class="scanner-header">
+          <h2>🛡️ Security Scanner</h2>
+          <p>Enter a domain to perform comprehensive security analysis</p>
+        </div>
+        
+        <div class="scanner-form">
+          <div class="input-group">
+            <input type="text" id="urlInput" placeholder="Enter domain (e.g., example.com)" class="scan-input">
+            <button onclick="startScan()" class="btn btn-scan" id="scanBtn">
+              <i class="fas fa-search"></i>
+              <span>Scan Website</span>
+            </button>
+          </div>
+        </div>
+        
+        <div id="scanProgress" class="scan-progress hidden">
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+          <p class="progress-text">Analyzing security configuration...</p>
+        </div>
+        
+        <div id="results" class="results-container"></div>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile-section hidden" id="profileSection">
+      <div class="container">
+        <div class="profile-header">
+          <div class="profile-avatar">
+            <img src="" alt="Profile" id="profileAvatar">
+          </div>
+          <div class="profile-info">
+            <h2 id="profileName"></h2>
+            <p class="profile-role" id="profileRole"></p>
+            <p class="profile-email" id="profileEmail"></p>
+          </div>
+          <button class="btn btn-outline" onclick="editProfile()">
+            <i class="fas fa-edit"></i> Edit Profile
+          </button>
+        </div>
+        
+        <div class="profile-stats">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="totalScans">0</h3>
+              <p>Total Scans</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="avgScore">0</h3>
+              <p>Avg Security Score</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-calendar"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="memberSince">-</h3>
+              <p>Member Since</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history-section hidden" id="historySection">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-history"></i> Scan History</h2>
+          <button class="btn btn-outline" onclick="refreshHistory()">
+            <i class="fas fa-sync-alt"></i> Refresh
+          </button>
+        </div>
+        
+        <div class="history-filters">
+          <select id="statusFilter" onchange="filterHistory()">
+            <option value="">All Status</option>
+            <option value="Completed">Completed</option>
+            <option value="Failed">Failed</option>
+          </select>
+          <select id="riskFilter" onchange="filterHistory()">
+            <option value="">All Risk Levels</option>
+            <option value="Low">Low Risk</option>
+            <option value="Medium">Medium Risk</option>
+            <option value="High">High Risk</option>
+            <option value="Critical">Critical Risk</option>
+          </select>
+        </div>
+        
+        <div id="historyList" class="history-list">
+          <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading scan history...</p>
+          </div>
+        </div>
+        
+        <div id="historyPagination" class="pagination"></div>
+      </div>
+    </section>
+
+    <!-- Analytics Section (Developer Only) -->
+    <section class="analytics-section hidden" id="analyticsSection">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-chart-bar"></i> Analytics Dashboard</h2>
+          <div class="analytics-period">
+            <select id="analyticsPeriod">
+              <option value="7">Last 7 days</option>
+              <option value="30">Last 30 days</option>
+              <option value="90">Last 90 days</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="analytics-grid">
+          <div class="analytics-card">
+            <div class="card-header">
+              <h3>Total Scans</h3>
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="card-value" id="analyticsTotal">0</div>
+          </div>
+          
+          <div class="analytics-card">
+            <div class="card-header">
+              <h3>Success Rate</h3>
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="card-value" id="analyticsSuccess">0%</div>
+          </div>
+          
+          <div class="analytics-card">
+            <div class="card-header">
+              <h3>Avg Security Score</h3>
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="card-value" id="analyticsAvgScore">0</div>
+          </div>
+          
+          <div class="analytics-card">
+            <div class="card-header">
+              <h3>High Risk Sites</h3>
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="card-value" id="analyticsHighRisk">0</div>
+          </div>
+        </div>
+        
+        <div class="analytics-charts">
+          <div class="chart-container">
+            <h3>Risk Level Distribution</h3>
+            <div id="riskChart" class="chart-placeholder">
+              <p>Chart will be displayed here</p>
+            </div>
+          </div>
+          
+          <div class="recent-scans">
+            <h3>Recent Scans</h3>
+            <div id="recentScansList" class="recent-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Authentication Modal -->
+  <div class="modal-overlay hidden" id="authModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="authModalTitle">Login</h3>
+        <button class="modal-close" onclick="closeAuthModal()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-sign-in-alt"></i>
+            Login
+          </button>
+        </form>
+        
+        <!-- Register Form -->
+        <form id="registerForm" class="auth-form hidden">
+          <div class="form-group">
+            <label for="registerName">Full Name</label>
+            <input type="text" id="registerName" required>
+          </div>
+          <div class="form-group">
+            <label for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" required minlength="6">
+          </div>
+          <div class="form-group">
+            <label for="registerRole">Role</label>
+            <select id="registerRole" required>
+              <option value="User">User</option>
+              <option value="Developer">Developer</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-user-plus"></i>
+            Create Account
+          </button>
+        </form>
+      </div>
+      
+      <div class="modal-footer">
+        <p id="authSwitchText">
+          Don't have an account? 
+          <a href="#" onclick="switchAuthMode()" id="authSwitchLink">Sign up</a>
+        </p>
+      </div>
+    </div>
   </div>
+
+  <!-- Profile Edit Modal -->
+  <div class="modal-overlay hidden" id="profileModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Edit Profile</h3>
+        <button class="modal-close" onclick="closeProfileModal()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <form id="profileForm" class="auth-form">
+          <div class="form-group">
+            <label for="editName">Full Name</label>
+            <input type="text" id="editName" required>
+          </div>
+          <div class="form-group">
+            <label for="editEmail">Email</label>
+            <input type="email" id="editEmail" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-save"></i>
+            Save Changes
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay hidden" id="loadingOverlay">
+    <div class="loading-spinner">
+      <i class="fas fa-spinner fa-spin"></i>
+      <p>Processing...</p>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
