@@ -7,7 +7,7 @@ const rateLimit = require('express-rate-limit');
 
 // Import routes
 const authRoutes = require('./routes/auth'); 
-const scanRoutes = require('./routes/scan');
+const scanRoutes = require('./routes/scan'); 
 
 const app = express();
 
